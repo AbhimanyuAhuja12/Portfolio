@@ -6,7 +6,7 @@ import {
   faXTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faCode, faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import "./contact.css"
 
 function BlackIconWrapper({ icon, ...rest }) {
@@ -173,13 +173,13 @@ export default function Contact() {
       <div className='grid grid-cols-3 gap-3 md:w-1/2'>
         <BlackIconWrapper
           icon={faInstagram}
-          target=''
+          target='https://www.instagram.com/abhi_ahuja12/'
         />
-        <RedIconWrapper icon={faXTwitter} target="" />
-        <BlackIconWrapper icon={faYoutube} target="" />
-        <RedIconWrapper icon={faLinkedinIn} target="" />
-        <BlackIconWrapper icon={faGithub} target=""  />
-        <RedIconWrapper icon={faEnvelope} target="" isEmail />
+        <RedIconWrapper icon={faXTwitter} target="https://x.com/Abhii_Ahuja" />
+        <BlackIconWrapper icon={faCode} target="https://leetcode.com/abhimanyuahuja12" />
+        <RedIconWrapper icon={faLinkedinIn} target="https://www.linkedin.com/in/abhimanyu-ahuja12/" />
+        <BlackIconWrapper icon={faGithub} target="https://github.com/AbhimanyuAhuja12"  />
+        <RedIconWrapper icon={faEnvelope} target="abhimanyuahuja12@gmail.com" isEmail />
       </div>
     </>
   )
