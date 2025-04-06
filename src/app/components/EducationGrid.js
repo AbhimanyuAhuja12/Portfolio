@@ -131,7 +131,7 @@ export default function EducationGrid({ setCurrentGrid, animatedStyles }) {
             />
           </svg>
           <p className="text-xl mt-4 font-bold tracking-widest text-[#264653]">
-            "Learning never exhausts the mind."
+            &ldquo;Learning never exhausts the mind.&rdquo;
           </p>
         </div>
 
@@ -150,14 +150,15 @@ export default function EducationGrid({ setCurrentGrid, animatedStyles }) {
         >
           <div className="space-y-3 text-[#333333] h-full overflow-auto">
             <div>
-              <h2 className="text-2xl font-bold text-[#386641] mb-1 underline decoration-wavy decoration-[#BC4749] underline-offset-4">
-                Bharati Vidyapeeth's College of Engineering
-              </h2>
+            <h2 className="text-2xl font-bold text-[#386641] mb-1 underline decoration-wavy decoration-[#BC4749] underline-offset-4">
+  Bharati Vidyapeeth&apos;s College of Engineering
+</h2>
+
               <p className="text-lg font-semibold text-[#6A994E]">
                 B.Tech in Information Technology (8.34 GPA) • 2021-2025
               </p>
               <p className="mt-1 text-sm tracking-wide leading-relaxed">
-                Currently pursuing my bachelor's degree with a focus on building
+                Currently pursuing my bachelor&apos;s degree with a focus on building
                 strong technical foundations. Additionally completing a Minor
                 Degree in Artificial Intelligence & Machine Learning to
                 complement my IT skills.
@@ -202,7 +203,7 @@ export default function EducationGrid({ setCurrentGrid, animatedStyles }) {
                 Summer Trainee
               </h3>
               <p className="text-md text-[#BC4749] font-semibold">
-                Bharati Vidyapeeth's College of Engineering
+                Bharati Vidyapeeth&apos;s College of Engineering
               </p>
               <p className="text-sm text-[#6A994E] mb-2">
                 New Delhi • Jul 2023 - Aug 2023
