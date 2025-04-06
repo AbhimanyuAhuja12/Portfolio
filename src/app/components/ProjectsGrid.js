@@ -10,6 +10,46 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
   const subheading =
     "Here are a few personal projects I've worked on over the years".split("")
 
+  // Define your projects data
+  const projects = [
+    {
+      title: "Project 1",
+      description: "A responsive web application built with React and Node.js",
+      imageUrl: "/api/placeholder/300/200",
+      link: "https://project1.example.com"
+    },
+    {
+      title: "Project 2",
+      description: "Data visualization dashboard using D3.js and React",
+      imageUrl: "/api/placeholder/300/200",
+      link: "https://project2.example.com"
+    },
+    {
+      title: "Project 3",
+      description: "Mobile app developed with React Native for tracking fitness goals",
+      imageUrl: "/api/placeholder/300/200",
+      link: "https://project3.example.com"
+    },
+    {
+      title: "Project 4",
+      description: "E-commerce platform with payment integration and user authentication",
+      imageUrl: "/api/placeholder/300/200",
+      link: "https://project4.example.com"
+    },
+    {
+      title: "Project 5",
+      description: "AI-powered chatbot built with TensorFlow and integrated with a web interface",
+      imageUrl: "/api/placeholder/300/200",
+      link: "https://project5.example.com"
+    },
+    {
+      title: "Project 6",
+      description: "Portfolio website with interactive animations and 3D elements",
+      imageUrl: "/api/placeholder/300/200",
+      link: "https://project6.example.com"
+    }
+  ]
+
   useEffect(() => {
     const id = setInterval(() => {
       if (nameIdx < name.length) {
@@ -35,6 +75,31 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
     },
   })
 
+  // ProjectCard component for consistent styling
+  const ProjectCard = ({ project, className }) => (
+    <div className={`flex flex-col h-full ${className}`}>
+      <div className="relative flex-shrink-0 h-32 overflow-hidden">
+        <img 
+          src={project.imageUrl} 
+          alt={project.title} 
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <div className="flex flex-col flex-grow p-4">
+        <h3 className="mb-2 text-xl font-bold">{project.title}</h3>
+        <p className="mb-4 text-sm">{project.description}</p>
+        <a 
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer" 
+          className="mt-auto px-3 py-1 text-center bg-neutral-900 text-white text-sm rounded hover:bg-neutral-700 transition-colors"
+        >
+          View Project
+        </a>
+      </div>
+    </div>
+  )
+
   return (
     <animated.div className='grid grid-cols-1 lg:grid-cols-9 lg:grid-rows-9 w-screen lg:h-screen p-5 gap-5 bg-stone-200'>
       <animated.div
@@ -43,8 +108,10 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[1]}
-          className='w-full h-full bg-[#A7C957] border border-black'
-        ></animated.div>
+          className='w-full h-full bg-[#A7C957] border border-black overflow-hidden'
+        >
+          <ProjectCard project={projects[0]} className="text-neutral-900" />
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -53,8 +120,10 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[3]}
-          className='w-full h-full relative bg-[#BC4749] border border-black'
-        ></animated.div>
+          className='w-full h-full relative bg-[#BC4749] border border-black overflow-hidden'
+        >
+          <ProjectCard project={projects[1]} className="text-white" />
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -63,8 +132,10 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[2]}
-          className='w-full h-full relative bg-[#6A994E] border border-neutral-900'
-        ></animated.div>
+          className='w-full h-full relative bg-[#6A994E] border border-neutral-900 overflow-hidden'
+        >
+          <ProjectCard project={projects[2]} className="text-white" />
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -97,8 +168,10 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[4]}
-          className='w-full h-full relative bg-[#6A994E] border border-neutral-900'
-        ></animated.div>
+          className='w-full h-full relative bg-[#6A994E] border border-neutral-900 overflow-hidden'
+        >
+          <ProjectCard project={projects[3]} className="text-white" />
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -107,8 +180,10 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[5]}
-          className='w-full h-full relative bg-[#BC4749] border border-neutral-900'
-        ></animated.div>
+          className='w-full h-full relative bg-[#BC4749] border border-neutral-900 overflow-hidden'
+        >
+          <ProjectCard project={projects[4]} className="text-white" />
+        </animated.div>
       </animated.div>
 
       <animated.div
@@ -117,8 +192,10 @@ export default function ProjectsGrid({ setCurrentGrid, animatedStyles }) {
       >
         <animated.div
           style={trails[4]}
-          className='w-full h-full lg:flex justify-between items-center p-10 gap-5 bg-[#A7C957] border border-black'
-        ></animated.div>
+          className='w-full h-full relative bg-[#A7C957] border border-black overflow-hidden'
+        >
+          <ProjectCard project={projects[5]} className="text-neutral-900" />
+        </animated.div>
       </animated.div>
     </animated.div>
   )
